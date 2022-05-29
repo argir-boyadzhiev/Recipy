@@ -9780,3 +9780,8 @@ input, select {
 .submit-personal-details {
   margin-top: 4rem;
 }
+
+.nutrientElement:hover {
+  color: red;
+  text-decoration: line-through;
+}
