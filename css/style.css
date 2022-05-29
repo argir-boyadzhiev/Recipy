@@ -7262,6 +7262,7 @@ button.bg-dark:focus {
 }
 
 .w-75 {
+
   width: 75% !important;
 }
 
@@ -9703,4 +9704,7 @@ p,
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+.checked {
+  color: orange;
 }
