@@ -9708,3 +9708,75 @@ p,
 .checked {
   color: orange;
 }
+
+label {
+  display: block;
+
+  color: #444;
+}
+
+/* Hide arrows on input with type=number */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input, select {
+  width: 70%;
+  box-sizing: border-box;
+  padding: 0.2rem 0.4rem;
+
+  background-color: white;
+  border: 1px solid #999;
+}
+
+.allergy-container {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0.5rem 0.7rem;
+  box-shadow: 0 0 6px rgba(0, 0,0, 0.3);
+}
+
+.allergy-container:not(:first-of-type) {
+  margin-top: 0.7rem;
+}
+
+.allergy-container p {
+  display: inline-block;
+  color: #1F1F2E;
+  margin: 0;
+}
+
+.box-button {
+  padding: 0 0.5rem;
+
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.remove-allergy {
+  background-color: red;
+}
+
+.add-allergy {
+  margin-top: 0.7rem;
+  display: inline-block;
+
+  font-size: 1.5rem;
+  padding: 0 0.7rem;
+}
+
+.submit-personal-details {
+  margin-top: 4rem;
+}
