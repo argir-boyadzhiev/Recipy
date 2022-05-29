@@ -84,3 +84,27 @@
     
 })(jQuery);
 
+var nutrientCounter = 0;
+function addNutrient() {
+    let nutrientElement = document.getElementById("nutrient");
+    let nutrient = nutrientElement.options[nutrientElement.selectedIndex].value;
+
+    let quantity = document.getElementById("quantity").value;
+    console.log(nutrient + ": " + quantity);
+
+    let nutrientListElement = document.getElementById("nutrientList");
+    let nutrientList = nutrientListElement.innerHTML;
+    nutrientList += '<li class="nutrientElement" id="nutrient-' + nutrientCounter + '" onclick="removeNutrient(' + nutrientCounter + ')">' + nutrient + ": " + quantity + "</li>";
+    nutrientListElement.innerHTML = nutrientList;
+
+    nutrientCounter++;
+}
+
+function removeNutrient(id) {
+    document.getElementById("nutrientList").removeChild(document.getElementById("nutrient-" + id));
+}
+
+function addRecipe() {
+    document.getElementById("addNutrientForm").style.display = "none";
+    document.getElementById("addNutrientResult").style.display = "block";
+}

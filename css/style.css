@@ -9708,3 +9708,8 @@ p,
 .checked {
   color: orange;
 }
+
+.nutrientElement:hover {
+  color: red;
+  text-decoration: line-through;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Recipy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 display-5 text-uppercase text-primary">Recipy</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav m-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="recipes.html" class="nav-item nav-link active">Recipes</a>
+                    <a href="account.html" class="nav-item nav-link">My Account</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid mb-5">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3">Create recipe</h1>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <div class="container py-5">
+        <!-- Form Start -->
+        <div class="bg-secondary mb-3" style="padding: 30px; display: block;" id="addNutrientForm">
+            <h3 class="mb-4">Create recipe</h3>
+            <form>
+                <div class="form-group">
+                    <label for="recipeTitle">Recipe title</label>
+                    <input type="text" class="form-control border-0" id="recipeTitle" style="font-size: 30px;">
+                </div>
+
+                <div class="form-group">
+                    <label for="recipeImage">Recipe Image</label>
+                    <input type="file" class="form-control border-0" id="recipeImage">
+                </div>
+
+                <div class="form-group">
+                    <label for="ingredient">Ingredients</label>
+                    <textarea id="ingredient" cols="30" rows="5" class="form-control border-0">
+Ingredient 1
+Ingredient 2
+...
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="instructions">Instructions</label>
+                    <textarea id="instructions" cols="30" rows="5" class="form-control border-0">
+Instruction 1
+Instruction 2
+...
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Macronutrients</label>
+                    <br>
+                    <label>Macronutrient:</label>
+                    <select id="nutrient">
+                        <option value="Carbohydrates">Carbohydrates</option>
+                        <option value="Total fat">Total fat</option>
+                        <option value="Saturated fat">Saturated fat</option>
+                        <option value="Trans fat">Trans fat</option>
+                        <option value="Protein">Protein</option>
+                        <option value="Fibre">Fibre</option>
+                        <option value="Calories">Calories</option>
+                        <option value="Potassium">Potassium</option>
+                        <option value="Total carbohydrates">Total carbohydrates</option>
+                        <option value="Sugars">Sugars</option>
+                    </select>
+                    <br>
+                    <label>Quantity:</label>
+                    <input type="text" id="quantity">
+                    <br>
+                    <a class="btn btn-primary font-weight-semi-bold py-2 px-3" onclick="addNutrient()">Add macronutrient</a>
+                    <ul id="nutrientList">   
+                    </ul>
+                </div>
+                    
+                <div class="form-group mb-0">
+                    <a class="btn btn-primary font-weight-semi-bold py-2 px-3" onclick="addRecipe()">
+                        Create recipe
+                    </a>
+                </div>
+            </form>
+        </div>
+        <div class="bg-secondary mb-3" style="padding: 30px; display: none;" id="addNutrientResult">
+            <h3>Recipe created successful!</h3>
+            <a class="btn btn-primary font-weight-semi-bold py-2 px-3" href="recipes.html">
+                Back to recipes
+            </a>
+        </div>
+        <!-- Form End -->
+    </div>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a href="#">Recipy</a>. All Rights Reserved. 
+				
+				<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+				Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <ul class="nav d-inline-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Terms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
